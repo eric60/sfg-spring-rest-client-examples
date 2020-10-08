@@ -143,7 +143,7 @@ public class RestTemplateExamples {
         //create customer to update
         String apiUrl = API_ROOT + "/customers/";
 
-        // Use Apache HTTP client factory
+        // Use Apache HTTP client factory since original doesn't support Path method
         //see: https://github.com/spring-cloud/spring-cloud-netflix/issues/1777
         HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory();
         RestTemplate restTemplate = new RestTemplate(requestFactory);

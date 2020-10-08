@@ -17,13 +17,13 @@ import java.util.List;
  * Created by jt on 9/21/17.
  */
 @Service
-public class ApiServiceImpl implements ApiService {
+public class ApiServiceRestTemplateImpl implements ApiService {
 
     private RestTemplate restTemplate;
 
     private final String api_url;
 
-    public ApiServiceImpl(RestTemplate restTemplate, @Value("${api.url}") String api_url) {
+    public ApiServiceRestTemplateImpl(RestTemplate restTemplate, @Value("${api.url}") String api_url) {
         this.restTemplate = restTemplate;
         this.api_url = api_url;
     }
